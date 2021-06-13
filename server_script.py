@@ -25,6 +25,7 @@ def main():
             print("[*] Message from client >> ", msg)
 
             msg_server = str(input("Enter message : "))
+            msg_server = msg_server.encode('utf8')
             data.send(msg_server)
 
         sock.close()

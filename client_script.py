@@ -18,6 +18,7 @@ def main():
     try:
         while True:
             msg = input("Enter message: ")
+            msg = msg.encode('utf8')
             sock.send(msg)
             msg_recv = sock.recv(1024)
             print("[*] Message from server >> ", msg_recv)
