@@ -21,7 +21,7 @@ def main():
             msg = msg.encode('utf8')
             sock.send(msg)
             msg_recv = sock.recv(1024)
-            print("[*] Message from server >> ", msg_recv)
+            print("[*] Message from server >> ", msg_recv.encode('utf8'))
         sock.close()
     except:
         print("[*] Error ...!")

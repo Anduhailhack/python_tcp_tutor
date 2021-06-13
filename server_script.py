@@ -22,7 +22,7 @@ def main():
         while True:
             print("[*] Got connection from >> ", addr)
             msg = data.recv(1024)
-            print("[*] Message from client >> ", msg)
+            print("[*] Message from client >> ", msg.encode('utf8'))
 
             msg_server = str(input("Enter message : "))
             msg_server = msg_server.encode('utf8')
